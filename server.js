@@ -24,7 +24,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.post("/chats", async (req, res) => {
-    // res.send(200);
     try {
         var chat = new Chats(req.body)
         await chat.save()
